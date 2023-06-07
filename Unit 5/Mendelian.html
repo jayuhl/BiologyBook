@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+     <!--Navigation bar-->
+  <div id="nav-placeholder">
+  
+  </div>
+  
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("../menu.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+    <div class="row">
+        <div class="column-main left">
+            <h2>Mendelian Genetics</h2>
+            <button class="btn" id="demo" onclick="orgFunction(id)">Mendel</button>
+            <br>
+            <br>
+            <button class="btn" id="demo1" onclick="genFunction(id)">Principles of Heredity</button>
+            <br>
+            <br>
+            <button class="btn" id="demo2" onclick="overFunction(id)">Laws of Probability
+            </button>
+            <br>
+            <br>
+            <button class="btn" id="demo3" onclick="pFunction(id)">Pedigrees</button>
+            <br>
+            <br>
+          </div>
+        <div id="content" class="column-main right">
+          <h3>Mendel's theory of genetics wouldn't be widely accepted until decades after his death. The peas were tasty, though.</h3>
+        </div>
+      </div>
+</body>
+<script>
+  function orgFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Common.html" width=100% height=100%></object>';
+    setColor(value);}
+  function genFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Principles.html" width=100% height=100%></object>';
+    setColor(value);}
+  function overFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Prob.html" width=100% height=100%></object>';
+    setColor(value);}
+  function pFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Pedigrees.html" width=100% height=100%></object>';
+    setColor(value);}
+    function setColor(value) {
+  const allButtons = document.getElementsByClassName("btn");
+  for(var i = 0; i < allButtons.length; i++) 
+  {
+    allButtons[i].style.color = "black";
+    allButtons[i].style.backgroundColor = "transparent";
+  }
+  document.getElementById(value).style.color = "white";
+  document.getElementById(value).style.backgroundColor = "#b8d8be";
+
+}
+</script>
+</html>

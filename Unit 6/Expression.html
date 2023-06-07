@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+     <!--Navigation bar-->
+  <div id="nav-placeholder">
+  
+  </div>
+  
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("../menu.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+    <div class="row">
+        <div class="column-main" style="background-color:#e0f0e3;">
+            <h2>Gene Expression</h2>
+            <button class="btn" id="demo1" onclick="orgFunction(id)">Bacterial Gene Expression</button>
+            <br><br><button class="btn" id="demo2" onclick="genFunction(id)">Eukaryotic Gene Expression</button>
+            <br><br><button class="btn" id="demo3" onclick="codeFunction(id)">Eukaryotic Development</button>
+            
+          </div>
+        <div id="content" class="column-main" style="background-color:#ffffff;">
+          <h3>Human cells contain about 5x as much RNA as DNA.</h3>
+        </div>
+      </div>
+</body>
+<script>
+  function orgFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Gene.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function genFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Euk.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function codeFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Dev.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+
+
+
+  function setColor(value) {
+    const allButtons = document.getElementsByClassName("btn");
+    for(var i = 0; i < allButtons.length; i++) 
+    {
+      allButtons[i].style.color = "black";
+      allButtons[i].style.backgroundColor = "transparent";
+    }
+    document.getElementById(value).style.color = "white";
+    document.getElementById(value).style.backgroundColor = "#b8d8be";
+
+  }
+</script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+     <!--Navigation bar-->
+  <div id="nav-placeholder">
+  
+  </div>
+  
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("../menu.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+    <div class="row">
+        <div class="column-main" style="background-color:#e0f0e3;">
+            <h2>Speciation and Extinction</h2>
+            <button class="btn" id="demo1" onclick="orgFunction(id)">Speciation</button>
+            <br><br><button class="btn" id="demo2" onclick="genFunction(id)">Prezygotic Barriers</button>
+            <br><br><button class="btn" id="demo3" onclick="codeFunction(id)">Postzygotic Barriers</button>
+            <br><br><button class="btn" id="demo4" onclick="artFunction(id)">Micro and Macroevolution</button>
+            <br><br><button class="btn" id="demo5" onclick="artvFunction(id)">Pace of Speciation            </button>
+            <br><br><button class="btn" id="demo6" onclick="aFunction(id)">Evolution and Speciation            </button>
+            <br><br><button class="btn" id="demo7" onclick="bFunction(id)">Extinction           </button>
+            
+          </div>
+        <div id="content" class="column-main" style="background-color:#ffffff;">
+          <h3>Wait what's a species anyways?</h3>
+        </div>
+      </div>
+</body>
+<script>
+  function orgFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Spec.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function genFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Reprod.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function codeFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Post.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function artFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Micro.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function artvFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Pace.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function aFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Evolution.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function bFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Ex.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  
+
+
+
+  function setColor(value) {
+    const allButtons = document.getElementsByClassName("btn");
+    for(var i = 0; i < allButtons.length; i++) 
+    {
+      allButtons[i].style.color = "black";
+      allButtons[i].style.backgroundColor = "transparent";
+    }
+    document.getElementById(value).style.color = "white";
+    document.getElementById(value).style.backgroundColor = "#b8d8be";
+
+  }
+</script>
+</html>

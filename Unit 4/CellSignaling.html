@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+     <!--Navigation bar-->
+  <div id="nav-placeholder">
+  
+  </div>
+  
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("../menu.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+    <div class="row">
+        <div class="column-main left">
+            <h2>Cell Signaling</h2>
+            <button class="btn" id="demo" onclick="overFunction(id)">Cell Signaling Overview</button>
+            <br>
+            <br>
+            <button class="btn" id="demo1" onclick="recFunction(id)">Stage 1: Reception</button>
+            <br>
+            <br>
+            <button class="btn" id="demo2" onclick="transFunction(id)">Stage 2: Transduction</button>
+            <br>
+            <br>
+            <button class="btn" id="demo3" onclick="resFunction(id)">Stage 3: Response</button>
+            <br>
+            <br>
+            <button class="btn" id="demo4" onclick="pathFunction(id)">Signal Transduction Pathway</button>
+            <br>
+            <br>
+            <button class="btn" id="demo5" onclick="gFunction(id)">G protein coupled receptors (GPCRs)</button>
+            <br>
+            <br>
+            <button class="btn" id="demo6" onclick="ionFunction(id)">Ion Channels</button>
+            <br>
+            <br>
+          </div>
+        <div id="content" class="column-main right">
+          <h3>It's a chemical radio!</h3>
+        </div>
+      </div>
+</body>
+<script>
+  function overFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Over.html" width=100% height=100%></object>';
+    setColor(value);}
+  function recFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Reception.html" width=100% height=100%></object>';
+    setColor(value);}
+  function transFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Transduction.html" width=100% height=100%></object>';
+    setColor(value);}
+  function resFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Response.html" width=100% height=100%></object>';
+    setColor(value);}
+  function pathFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Pathway.html" width=100% height=100%></object>';
+    setColor(value);}
+  function gFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="GPCR.html" width=100% height=100%></object>';
+    setColor(value);}
+  function ionFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Ion.html" width=100% height=100%></object>';
+    setColor(value);}
+  function setColor(value) {
+  const allButtons = document.getElementsByClassName("btn");
+  for(var i = 0; i < allButtons.length; i++) 
+  {
+    allButtons[i].style.color = "black";
+    allButtons[i].style.backgroundColor = "transparent";
+  }
+  document.getElementById(value).style.color = "white";
+  document.getElementById(value).style.backgroundColor = "#b8d8be";
+
+}
+</script>
+</html>
