@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+     <!--Navigation bar-->
+  <div id="nav-placeholder">
+  
+  </div>
+  
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("../menu.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+    <div class="row">
+        <div class="column-main left">
+            <h2>Photosynthesis</h2>
+            <button class="btn" id="demo1" onclick="overviewFunction(id)">Photosynthesis Overview</button>
+            <br>
+            <br>
+            <button class="btn" id="demo2" onclick="evolFunction(id)">Evolution of Photosynthesis</button>
+            <br>
+            <br>
+            <button class="btn" id="demo3" onclick="siteFunction(id)">Site of Photosynthesis</button>
+            <br>
+            <br>
+            <button class="btn" id="demo4" onclick="lightFunction(id)">Light and Photosynthesis</button>
+            <br>
+            <br>
+            <button class="btn" id="demo5" onclick="lightrFunction(id)">The Light Reactions</button>
+            <br>
+            <br>
+            <button class="btn" id="demo6" onclick="photosFunction(id)">The Photosystems</button>
+            <br>
+            <br>
+            <button class="btn" id="demo7" onclick="calFunction(id)">The Calvin Cycle</button>
+            <br>
+            <br>
+            <button class="btn" id="demo8" onclick="adFunction(id)">Adaptations</button>
+            <br>
+            <br>
+          </div>
+        <div id="content" class="column-main right">
+          <h3>Sun to sugar, baby!</h3>
+        </div>
+      </div>
+</body>
+<script>
+  function overviewFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="PhotoOverview.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function evolFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Evol.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function siteFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Site.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function lightFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Light.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function lightrFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="LightR.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function photosFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Photosystem.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function calFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Calvin.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function adFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Adaptations.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function setColor(value) {
+    const allButtons = document.getElementsByClassName("btn");
+    for(var i = 0; i < allButtons.length; i++) 
+    {
+      allButtons[i].style.color = "black";
+      allButtons[i].style.backgroundColor = "transparent";
+    }
+    document.getElementById(value).style.color = "white";
+    document.getElementById(value).style.backgroundColor = "#b8d8be";
+
+  }
+</script>
+</html>

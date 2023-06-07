@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+     <!--Navigation bar-->
+  <div id="nav-placeholder">
+  
+  </div>
+  
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("../menu.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+    <div class="row">
+        <div class="column-main left">
+            <h2>Cellular Respiration</h2>
+            <button class="btn" id="demo1" onclick="overviewFunction(id)">Cellular Respiration Overview</button>
+            <br>
+            <br>
+            <button class="btn" id="demo2" onclick="glyFunction(id)">Glycolysis</button>
+            <br>
+            <br>
+            <button class="btn" id="demo3" onclick="pyrFunction(id)">Pyruvate Oxidation and Citric Acid Cycle</button>
+            <br>
+            <br>
+            <button class="btn" id="demo4" onclick="oxFunction(id)">Oxidative Phosphorylation</button>
+            <br>
+            <br>
+            <button class="btn" id="demo5" onclick="quickFunction(id)">Quick Review: Cellular Respiration</button>
+            <br>
+            <br>
+            <button class="btn" id="demo6" onclick="fermFunction(id)">Respiration without Oxygen</button>
+            <br>
+            <br>
+            <button class="btn" id="demo7" onclick="quick2Function(id)">Quick Review: chemical energy → ATP</button>
+            <br>
+            <br>
+          </div>
+        <div id="content" class="column-main right">
+          <h3>You must be 21 or older to view this fermentation-related content.</h3>
+        </div>
+      </div>
+</body>
+<script>
+  function overviewFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="CellularOverview.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function glyFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Glycolysis.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function pyrFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Pyruvate.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function oxFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Oxidative.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function quickFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Quick.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function fermFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Fermentation.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function quick2Function(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Quick2.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function setColor(value) {
+    const allButtons = document.getElementsByClassName("btn");
+    for(var i = 0; i < allButtons.length; i++) 
+    {
+      allButtons[i].style.color = "black";
+      allButtons[i].style.backgroundColor = "transparent";
+    }
+    document.getElementById(value).style.color = "white";
+    document.getElementById(value).style.backgroundColor = "#b8d8be";
+
+  }
+</script>
+</html>

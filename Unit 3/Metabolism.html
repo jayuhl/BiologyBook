@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+  </head>
+  <body>
+     <!--Navigation bar-->
+  <div id="nav-placeholder">
+  
+  </div>
+  
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("../menu.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+    <div class="row">
+      <div class="column-main left">
+        <h2>Metabolism and Enzymes</h2>
+            <button class="btn" id="demo1" onclick="overviewFunction(id)">Metabolic Pathways</button>
+            <br><br>
+            <button class="btn" id="demo2" onclick="thermFunction(id)">Laws of Thermodynamics</button>
+            <br><br>
+            <button class="btn" id="demo3" onclick="enzymesFunction(id)">Enzymes</button>
+            <br><br>
+            <button class="btn" id="demo4" onclick="effectFunction(id)">Environmental Effects on Enzymes</button>
+            <br><br>
+            <button class="btn" id="demo5" onclick="cofFunction(id)">Enzyme Cofactors</button>
+            <br><br>
+            <button class="btn" id="demo6" onclick="inhibitFunction(id)">Enzyme Inhibitors</button>
+            <br><br>
+            <button class="btn" id="demo7" onclick="regFunction(id)">Regulation of Chemical Reactions</button>
+            <br><br>
+            <button class="btn" id="demo8" onclick="alloFunction(id)">Allosteric Regulation</button>
+            <br><br>
+            <button class="btn" id="demo9" onclick="feedFunction(id)">Feedback Inhibition</button>
+            </div>
+        <div id="content" class="column-main right">
+          <h3>Pretty much anything that ends in -ase.</h3>
+        </div>
+      </div>
+</body>
+<script>
+  function overviewFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Overview.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function thermFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Thermodynamics.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function enzymesFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Enzymes.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function effectFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Effects.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function cofFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Cofactors.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function inhibitFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Inhibit.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function regFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Reg.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function alloFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Allo.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function feedFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Feedback.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function setColor(value) {
+    const allButtons = document.getElementsByClassName("btn");
+    for(var i = 0; i < allButtons.length; i++) 
+    {
+      allButtons[i].style.color = "black";
+      allButtons[i].style.backgroundColor = "transparent";
+    }
+    document.getElementById(value).style.color = "white";
+    document.getElementById(value).style.backgroundColor = "#b8d8be";
+
+  }
+</script>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+     <!--Navigation bar-->
+  <div id="nav-placeholder">
+  
+  </div>
+  
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("../menu.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+    <div class="row">
+        <div class="column-main left">
+            <h3>Biological Macromolecules</h3>
+            <button class="btn" id="demo1" onclick="elementsFunction(id)">Elements of Life</button>
+            <br>
+            <br>
+            <button class="btn" id="demo2" onclick="functionalFunction(id)">Functional Groups</button>
+            <br>
+            <br>
+            <button class="btn" id="demo3" onclick="macroFunction(id)">Introduction to Biological Macromolecules</button>
+            <br>
+            <br>
+            <button class="btn" id="demo4" onclick="carbFunction(id)">Carbohydrates</button>
+            <br>
+            <br>
+            <button class="btn" id="demo5" onclick="proteinFunction(id)">Proteins</button>
+            <br>
+            <br>
+            <button class="btn" id="demo6" onclick="nucleicFunction(id)">Nucleic Acids</button>
+            <br>
+            <br>
+            <button class="btn" id="demo7" onclick="lipidFunction(id)">Lipids</button>
+            <br>
+            <br>
+            <button class="btn" id="demo8" onclick="macroReviewFunction(id)">Quick Review</button>
+            <br>
+            <br>
+          </div>
+        <div id="content" class="column-main right">
+          <h3>Macromolecules ... they're everywhere.</h3>
+        </div>
+      </div>
+</body>
+<script>
+  function carbFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Carbohydrates.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function elementsFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Elements.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function functionalFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Functional.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function macroFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Macromolecules.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function proteinFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Proteins.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function nucleicFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Nucleic.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function lipidFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Lipids.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function macroReviewFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="MacroReview.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+
+  function setColor(value) {
+    const allButtons = document.getElementsByClassName("btn");
+    for(var i = 0; i < allButtons.length; i++) 
+    {
+      allButtons[i].style.color = "black";
+      allButtons[i].style.backgroundColor = "transparent";
+    }
+    document.getElementById(value).style.color = "white";
+    document.getElementById(value).style.backgroundColor = "#b8d8be";
+
+  }
+</script>
+</html>
