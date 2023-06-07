@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+     <!--Navigation bar-->
+  <div id="nav-placeholder">
+  
+  </div>
+  
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("../menu.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+    <div class="row">
+        <div class="column-main" style="background-color:#e0f0e3;"">
+            <center><h2>Responses to the Environment</h2></center>
+            <button class="btn" id="demo1" onclick="orgFunction(id)">Behavioral Ecology            </button>
+            <br><br>
+            <button class="btn" id="demo2" onclick="genFunction(id)">Innate Behaviors</button>
+            <br><br> <button class="btn" id="demo3" onclick="codeFunction(id)">Learned Behaviors</button>
+            <br><br><button class="btn" id="demo4" onclick="artFunction(id)">Natural Selection            </button>
+            <br><br><button class="btn" id="demo5" onclick="artvFunction(id)">Responses in Plants            </button>
+            <br><br>
+          </div>
+        <div id="content" class="column-main" style="background-color:#ffffff;">
+          <h3>You can bring a horse to water, but you can't teach it to whack flies with its tail. It knew how to do that already!</h3>
+        </div>
+      </div>
+</body>
+<script>
+  function orgFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Behave.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function genFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Innate.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function codeFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Learn.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function artFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Nat.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  function artvFunction(value) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="Resp.html" width=100% height=100%></object>';
+    setColor(value);
+  }
+  
+
+
+
+  function setColor(value) {
+    const allButtons = document.getElementsByClassName("btn");
+    for(var i = 0; i < allButtons.length; i++) 
+    {
+      allButtons[i].style.color = "black";
+      allButtons[i].style.backgroundColor = "transparent";
+    }
+    document.getElementById(value).style.color = "white";
+    document.getElementById(value).style.backgroundColor = "#b8d8be";
+
+  }
+</script>
+</html>
